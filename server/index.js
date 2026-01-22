@@ -11,7 +11,28 @@ const cartRoutes = require('./routes/carts');
 const orderRoutes = require('./routes/orders');
 
 // 미들웨어 설정
-app.use(cors());
+const defaultAllowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'https://final-assignment-eosin.vercel.app',
+];
+const envOrigins = (process.env.CORS_ORIGIN || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+const allowedOrigins = envOrigins.length > 0 ? envOrigins : defaultAllowedOrigins;
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error('Not allowed by CORS'));
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/users', userRoutes);
