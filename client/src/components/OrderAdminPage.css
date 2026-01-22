@@ -1,0 +1,105 @@
+.order-admin-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.order-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-admin-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(19, 25, 33, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-admin-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.order-admin-card header div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #1f2a37;
+  font-size: 14px;
+}
+
+.order-admin-card header span {
+  color: #475569;
+  font-weight: 500;
+}
+
+.order-admin-status {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #1f2a37;
+  font-size: 14px;
+}
+
+.order-admin-status-control select {
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  padding: 6px 10px;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.order-admin-status-control select:focus {
+  outline: none;
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.25);
+}
+
+.order-admin-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.order-admin-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+}
+
+.order-admin-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.order-admin-item .item-name {
+  font-weight: 500;
+}
+
+.order-admin-item .item-price {
+  color: #1f2937;
+}
+
+@media (max-width: 640px) {
+  .order-admin-card header {
+    flex-direction: column;
+  }
+
+  .order-admin-item {
+    grid-template-columns: 1fr;
+  }
+}

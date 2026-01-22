@@ -1,0 +1,273 @@
+.app {
+  min-height: 100vh;
+  background: #f7f7f9;
+  color: #1f2937;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 20px;
+  background: #111827;
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.container {
+  max-width: 520px;
+  margin: 24px auto 0;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.primary,
+.secondary {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.status {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.status.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px 80px;
+}
+
+.home-nav {
+  width: 100%;
+  padding: 12px 20px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 9;
+}
+
+.home-nav.is-sticky {
+  margin-top: 0;
+}
+
+.home-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.home-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home-logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.home-tagline {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.home-links {
+  display: flex;
+  gap: 16px;
+}
+
+.home-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.home-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hero-content h2 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero-card {
+  background: #eff6ff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.hero-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.section {
+  margin-top: 48px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 90px;
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-role {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.card-badge {
+  align-self: flex-start;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.gym-info {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.image-preview {
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.image-preview img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+}

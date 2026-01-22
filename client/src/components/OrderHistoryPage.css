@@ -1,0 +1,83 @@
+.order-history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.order-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-history-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(19, 25, 33, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-history-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.order-history-card header div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #1f2a37;
+  font-size: 14px;
+}
+
+.order-history-card header span {
+  color: #475569;
+  font-weight: 500;
+}
+
+.order-history-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.order-history-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+}
+
+.order-history-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.order-history-item .item-name {
+  font-weight: 500;
+}
+
+.order-history-item .item-price {
+  color: #1f2937;
+}
+
+@media (max-width: 640px) {
+  .order-history-card header {
+    flex-direction: column;
+  }
+
+  .order-history-item {
+    grid-template-columns: 1fr;
+  }
+}

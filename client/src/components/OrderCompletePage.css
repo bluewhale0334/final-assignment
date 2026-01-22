@@ -1,0 +1,48 @@
+.order-complete-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.order-complete-card {
+  max-width: 520px;
+  width: 100%;
+  padding: 32px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  text-align: center;
+}
+
+.order-complete-card h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+.order-complete-card p {
+  margin: 0 0 12px;
+  color: #475569;
+}
+
+.order-complete-id {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.order-complete-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .order-complete-card {
+    padding: 24px;
+  }
+
+  .order-complete-actions {
+    flex-direction: column;
+  }
+}
