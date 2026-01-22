@@ -20,7 +20,9 @@ const envOrigins = (process.env.CORS_ORIGIN || '')
   .split(',')
   .map((origin) => origin.trim())
   .filter(Boolean);
-const allowedOrigins = envOrigins.length > 0 ? envOrigins : defaultAllowedOrigins;
+const allowedOrigins = Array.from(
+  new Set([...defaultAllowedOrigins, ...envOrigins])
+);
 
 app.use(
   cors({
